@@ -1,0 +1,525 @@
+/* ==========================================================================
+   CSS Variables (المتغيرات والألوان)
+   ========================================================================== */
+:root {
+    --primary: #1e3a8a; /* أزرق داكن يعطي ثقة واحترافية */
+    --primary-light: #2563eb;
+    --accent: #ea580c; /* برتقالي داكن للانتباه والأزرار */
+    --whatsapp: #25D366;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border: #e5e7eb;
+    --radius: 8px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Base & Reset (الأساسيات)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Buttons (الأزرار)
+   ========================================================================== */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 16px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--bg-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-secondary {
+    background-color: var(--whatsapp);
+    color: var(--bg-white);
+}
+
+.btn-secondary:hover {
+    background-color: #1ebd5a;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   Header & Navigation (الرأس والقائمة)
+   ========================================================================== */
+.main-header {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo strong {
+    font-size: 24px;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.main-nav {
+    display: none; /* مخفية في الموبايل، تظهر بالشاشات الكبيرة */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-call-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    display: block; /* تظهر في الموبايل فقط */
+}
+
+/* ==========================================================================
+   Hero Section (القسم الرئيسي)
+   ========================================================================== */
+.hero {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-image-placeholder {
+    margin-top: 40px;
+    background-color: #e2e8f0;
+    height: 250px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    border: 2px dashed #cbd5e1;
+}
+
+/* ==========================================================================
+   Services Section (الخدمات)
+   ========================================================================== */
+.services {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.service-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   Why Us & How it Works (لماذا نحن وآلية العمل)
+   ========================================================================== */
+.why-us, .how-it-works {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.features-list li {
+    background-color: var(--bg-white);
+    padding: 15px;
+    border-radius: var(--radius);
+    border-right: 4px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.step {
+    background-color: var(--bg-white);
+    padding: 24px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-light);
+    color: var(--bg-white);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   FAQ Section (الأسئلة الشائعة)
+   ========================================================================== */
+.faq {
+    padding: 80px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 18px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--bg-light);
+    color: var(--primary);
+    list-style: none;
+    position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+}
+
+.faq-item p {
+    padding: 20px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   Service Areas & CTA (مناطق الخدمة ودعوة الإجراء)
+   ========================================================================== */
+.service-areas {
+    padding: 60px 0;
+    background-color: var(--primary);
+    color: var(--bg-white);
+}
+
+.service-areas h2 {
+    color: var(--bg-white);
+    margin-bottom: 15px;
+}
+
+.service-areas p {
+    color: #e2e8f0;
+}
+
+.cta-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    margin-bottom: 30px;
+    color: var(--text-muted);
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Footer (التذييل)
+   ========================================================================== */
+.main-footer {
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-info h3, .footer-contact h4 {
+    color: var(--bg-white);
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    color: #9ca3af;
+}
+
+.footer-contact a {
+    color: var(--bg-white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Floating Buttons (الأزرار العائمة للموبايل)
+   ========================================================================== */
+.floating-actions {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    pointer-events: none; /* لتجنب حجب النقر عن العناصر أسفلها */
+}
+
+.float-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    pointer-events: auto; /* إعادة تفعيل النقر للزر نفسه */
+    transition: transform 0.3s ease;
+}
+
+.float-btn:active {
+    transform: scale(0.9);
+}
+
+.whatsapp-float {
+    background-color: var(--whatsapp);
+}
+
+.phone-float {
+    background-color: var(--primary);
+}
+
+/* ==========================================================================
+   Media Queries (الشاشات الكبيرة - Desktop)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .main-nav {
+        display: block;
+    }
+    
+    .main-nav .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .main-nav a {
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .main-nav a:hover {
+        color: var(--accent);
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .floating-actions {
+        bottom: 30px;
+        left: 30px;
+        right: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
