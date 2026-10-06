@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alhasan-riyadh.vercel.app/sitemap.xml
