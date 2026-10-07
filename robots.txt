@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alhasan-riyadh.vercel.app/sitemap.xml
+Sitemap: https://elhassan-nu.vercel.app/sitemap.xml
+
